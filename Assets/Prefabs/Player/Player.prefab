@@ -185,6 +185,8 @@ GameObject:
   - component: {fileID: 3693328185823961833}
   - component: {fileID: 9058116974248076154}
   - component: {fileID: -5384060518515581685}
+  - component: {fileID: 2349616857816252852}
+  - component: {fileID: 7125854523804643748}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -243,7 +245,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1376573207000717616}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8634f26954ada7045b88e91072457676, type: 3}
+  m_Script: {fileID: 11500000, guid: 84f0b063c883a694aa1e453a3b85bacc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   ShowTopMostFoldoutHeaderGroup: 1
@@ -270,6 +272,51 @@ MonoBehaviour:
   SwitchTransformSpaceWhenParented: 0
   Interpolate: 1
   SlerpPosition: 0
+--- !u!50 &2349616857816252852
+Rigidbody2D:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1376573207000717616}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDamping: 0
+  m_AngularDamping: 0
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 1
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 4
+--- !u!114 &7125854523804643748
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1376573207000717616}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4d403159cb6bcff44b1363f19a22bfce, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ShowTopMostFoldoutHeaderGroup: 1
+  _inputReader: {fileID: 11400000, guid: 4ccea6e4b9f7d084d9a0f8424cf0d8d4, type: 2}
+  _bodyTransform: {fileID: 1323317753206166854}
+  _rb: {fileID: 2349616857816252852}
+  _movemenntSpeed: 5
+  _turningRate: 250
 --- !u!1 &3118696451674508533
 GameObject:
   m_ObjectHideFlags: 0
@@ -415,7 +462,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 3118696451674508533}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8634f26954ada7045b88e91072457676, type: 3}
+  m_Script: {fileID: 11500000, guid: 84f0b063c883a694aa1e453a3b85bacc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   ShowTopMostFoldoutHeaderGroup: 1
@@ -484,7 +531,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 9220533506567839036}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8634f26954ada7045b88e91072457676, type: 3}
+  m_Script: {fileID: 11500000, guid: 84f0b063c883a694aa1e453a3b85bacc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   ShowTopMostFoldoutHeaderGroup: 1

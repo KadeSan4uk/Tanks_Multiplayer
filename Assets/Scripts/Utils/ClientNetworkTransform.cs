@@ -1,6 +1,4 @@
 using Unity.Netcode.Components;
-using UnityEngine;
-using System;
 public class ClientNetworkTransform : NetworkTransform
 {
 
@@ -22,6 +20,7 @@ public class ClientNetworkTransform : NetworkTransform
             {
                 if (CanCommitToTransform)
                 {
+                    //TryCommitToServer is method not working more.
                     SetState(transform.position, transform.rotation, transform.localScale);
                 }
             }

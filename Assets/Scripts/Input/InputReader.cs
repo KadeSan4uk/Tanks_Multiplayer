@@ -10,17 +10,22 @@ public class InputReader : ScriptableObject, IPlayerActions
 
     public event Action<bool> PrimaryFireEvent;
 
-    private Controls controls;
+    private Controls _controls;
 
     private void OnEnable()
     {
-        if (controls is null)
+        if (_controls is null)
         {
-            controls = new Controls();
-            controls.Player.SetCallbacks(this);
+            _controls = new Controls();
+            _controls.Player.SetCallbacks(this);
 
-            controls.Player.Enable();
+            _controls.Player.Enable();
         }
+    }
+
+    private void OnDisable()
+    {
+        _controls.Player.Disable();
     }
 
     public void OnMove(InputAction.CallbackContext context)
