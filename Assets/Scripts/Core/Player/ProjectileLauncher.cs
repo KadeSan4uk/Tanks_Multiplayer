@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class ProjectileLauncher : NetworkBehaviour
 {
-    [Header("Referenses")]
+    [Header("References")]
     [SerializeField] private InputReader _inputReader;
     [SerializeField] private Transform _projectileSpawnPoint;
     [SerializeField] private GameObject _serverProjectilePrefab;

@@ -3,7 +3,7 @@ using UnityEngine;
 
 public class PlayerMovement : NetworkBehaviour
 {
-    [Header("Referenses")]
+    [Header("References")]
     [SerializeField] private InputReader _inputReader;
     [SerializeField] private Transform _bodyTransform;
     [SerializeField] private Rigidbody2D _rb;
