@@ -191,6 +191,7 @@ GameObject:
   - component: {fileID: 7125854523804643748}
   - component: {fileID: 3183116031346755980}
   - component: {fileID: 6350386455127534768}
+  - component: {fileID: 4709900957647045994}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -358,6 +359,22 @@ MonoBehaviour:
   _projectileSpeed: 30
   _fireRate: 0.75
   _muzzleFlashDuration: 0.075
+--- !u!114 &4709900957647045994
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1376573207000717616}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c7733c5029e06e74a92de0a4df7aea9d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ShowTopMostFoldoutHeaderGroup: 1
+  <MaxHealth>k__BackingField: 100
+  CurrentHealth:
+    m_InternalValue: 0
 --- !u!1 &3118696451674508533
 GameObject:
   m_ObjectHideFlags: 0
