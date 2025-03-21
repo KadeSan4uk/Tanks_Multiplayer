@@ -8,6 +8,11 @@ public class PlayerAiming : NetworkBehaviour
 
     private void LateUpdate()
     {
+        Aiming();
+    }
+
+    private void Aiming()
+    {
         if (!IsOwner) { return; }
 
         Vector2 aimScreenPosition = _inputReader.AimPosition;
