@@ -866,10 +866,10 @@ PlayerSettings:
   captureStartupLogs: {}
   activeInputHandler: 2
   windowsGamepadBackendHint: 0
-  cloudProjectId: 8c1cf886-41a5-48ac-810e-6472d351d56b
+  cloudProjectId: f2db500b-6466-4995-8c15-ef6e01967be4
   framebufferDepthMemorylessMode: 0
   qualitySettingsNames: []
-  projectName: Tanks_Multiplayer (2)
+  projectName: Tanks_Multiplayer
   organizationId: unity_bbbce41447a78610638b
   cloudEnabled: 0
   legacyClampBlendShapeWeights: 0
