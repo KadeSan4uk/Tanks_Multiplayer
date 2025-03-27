@@ -21,10 +21,11 @@ public class ApplicationController : MonoBehaviour
         }
         else
         {
-            ClientSingleton clientSingleton = Instantiate(_clientPrefab);
-            bool authenticated = await clientSingleton.CreateClient();
-            HostSingleton hostSingleton = Instantiate(_hostPrefab);
+            HostSingleton hostSingleton = Instantiate(_hostPrefab);//It must be first created HostPrefab
             hostSingleton.CreateHost();
+
+            ClientSingleton clientSingleton = Instantiate(_clientPrefab);// If clientPrefab was created firs then hostPrefab, we are having NullReferensExceptoin.
+            bool authenticated = await clientSingleton.CreateClient();
 
             //go to Main Menu
             if (authenticated)
@@ -33,5 +34,4 @@ public class ApplicationController : MonoBehaviour
             }
         }
     }
-
 }
