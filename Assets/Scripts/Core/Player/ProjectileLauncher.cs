@@ -115,7 +115,7 @@ public class ProjectileLauncher : NetworkBehaviour
             rb.linearVelocity = rb.transform.up * _projectileSpeed;
         }
 
-        SpawnDummyProjectile(spawnPos, direction);
+        PrimaryFireClientRpc(spawnPos, direction);
     }
 
     private void SpawnDummyProjectile(Vector3 spawnPos, Vector3 direction)
