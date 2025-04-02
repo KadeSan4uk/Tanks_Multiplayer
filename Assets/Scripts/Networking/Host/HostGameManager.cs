@@ -18,7 +18,7 @@ using Unity.Services.Authentication;
 
 public class HostGameManager : IDisposable
 {
-    private NetworkServer _networkServer;
+    public NetworkServer networkServer { get; private set; }
     private Allocation _allocation;
     private string _joinCode;
     private string _lobbyId;
@@ -80,7 +80,7 @@ public class HostGameManager : IDisposable
             return;
         }
 
-        _networkServer = new NetworkServer(NetworkManager.Singleton);
+        networkServer = new NetworkServer(NetworkManager.Singleton);
 
         UserData userData = new UserData
         {
@@ -125,6 +125,6 @@ public class HostGameManager : IDisposable
             _lobbyId = string.Empty;
         }
 
-        _networkServer.Dispose();
+        networkServer.Dispose();
     }
 }
