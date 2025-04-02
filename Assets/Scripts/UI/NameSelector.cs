@@ -16,7 +16,6 @@ public class NameSelector : MonoBehaviour
     {
         if (SystemInfo.graphicsDeviceType == UnityEngine.Rendering.GraphicsDeviceType.Null)
         {
-            Debug.Log("Запуск в серверном режиме, переход на следующую сцену...");
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
 
             return;
