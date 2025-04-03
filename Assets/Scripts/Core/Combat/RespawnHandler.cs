@@ -11,10 +11,10 @@ public class RespawnHandler : NetworkBehaviour
     {
         if (!IsServer) { return; }
 
-        // TankPlayer[] players = FindObjectsOfType<TankPlayer>();//Old FindObject method
-        TankPlayer[] players = NetworkManager.Singleton.ConnectedClientsList
-         .Select(client => client.PlayerObject.GetComponent<TankPlayer>())
-         .ToArray();
+        TankPlayer[] players = FindObjectsByType<TankPlayer>(FindObjectsSortMode.None);//Old FindObject method
+        //TankPlayer[] players = NetworkManager.Singleton.ConnectedClientsList
+        // .Select(client => client.PlayerObject.GetComponent<TankPlayer>())
+        // .ToArray();
 
         foreach (TankPlayer player in players)
         {

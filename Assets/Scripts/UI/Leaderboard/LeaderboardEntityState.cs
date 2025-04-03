@@ -2,13 +2,13 @@ using System;
 using Unity.Collections;
 using Unity.Netcode;
 
-public struct LeaderboardEntitySate : INetworkSerializable, IEquatable<LeaderboardEntitySate>
+public struct LeaderboardEntityState : INetworkSerializable, IEquatable<LeaderboardEntityState>
 {
     public ulong ClientId;
     public FixedString32Bytes PlayerName;
     public int Coins;
 
-    public bool Equals(LeaderboardEntitySate other)
+    public bool Equals(LeaderboardEntityState other)
     {
         return ClientId == other.ClientId && PlayerName.Equals(other.PlayerName) && Coins == other.Coins;
     }
