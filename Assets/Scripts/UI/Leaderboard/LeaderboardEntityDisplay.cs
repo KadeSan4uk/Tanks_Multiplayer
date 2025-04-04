@@ -1,10 +1,12 @@
 using TMPro;
 using Unity.Collections;
+using Unity.Netcode;
 using UnityEngine;
 
 public class LeaderboardEntityDisplay : MonoBehaviour
 {
     [SerializeField] private TMP_Text _displayText;
+    [SerializeField] private Color _myColour;
 
     private FixedString32Bytes _playerName;
 
@@ -15,6 +17,12 @@ public class LeaderboardEntityDisplay : MonoBehaviour
     {
         _playerName = playerName;
         ClientId = clientId;
+
+        if (clientId == NetworkManager.Singleton.LocalClientId)
+        {
+            _displayText.color = _myColour;
+        }
+
         UpdateCoins(coins);
     }
 
@@ -25,8 +33,8 @@ public class LeaderboardEntityDisplay : MonoBehaviour
 
     }
 
-    private void UpdateText()
+    public void UpdateText()
     {
-        _displayText.text = $"1. {_playerName} ({Coins})";
+        _displayText.text = $"{transform.GetSiblingIndex() + 1}. {_playerName} ({Coins})";
     }
 }
