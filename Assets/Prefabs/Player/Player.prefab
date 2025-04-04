@@ -526,7 +526,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ShowTopMostFoldoutHeaderGroup: 1
   _camera: {fileID: 179651680252195793}
-  <health>k__BackingField: {fileID: 4709900957647045994}
+  <Health>k__BackingField: {fileID: 4709900957647045994}
+  <Wallet>k__BackingField: {fileID: 1736616898368969296}
   _ownerPriority: 15
   playerName:
     m_InternalValue:

@@ -8,7 +8,8 @@ public class TankPlayer : NetworkBehaviour
 {
     [Header("Referenses")]
     [SerializeField] private CinemachineCamera _camera;
-    [field: SerializeField] public Health health { get; private set; }
+    [field: SerializeField] public Health Health { get; private set; }
+    [field: SerializeField] public CoinWallet Wallet { get; private set; }
 
     [Header("Settings")]
     [SerializeField] private int _ownerPriority = 15;
