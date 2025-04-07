@@ -8055,7 +8055,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ShowTopMostFoldoutHeaderGroup: 1
   _coinPrefab: {fileID: 3289272204067664410, guid: 91acba7c5fd34c849aa2797a27870be7, type: 3}
-  _maxCoin: 40
+  _maxCoin: 60
   _coinValue: 10
   _xSpawnRange: {x: -50, y: 50}
   _ySpawnRange: {x: -50, y: 50}

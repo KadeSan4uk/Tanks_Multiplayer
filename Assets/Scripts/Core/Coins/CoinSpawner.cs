@@ -10,12 +10,13 @@ public class CoinSpawner : NetworkBehaviour
     [SerializeField] private Vector2 _ySpawnRange;
     [SerializeField] private LayerMask _layerMask;
 
-    private float coinRadius;
+    private float _coinRadius;
 
     public override void OnNetworkSpawn()
     {
         if (!IsServer) { return; }
-        coinRadius = _coinPrefab.GetComponent<CircleCollider2D>().radius;
+
+        _coinRadius = _coinPrefab.GetComponent<CircleCollider2D>().radius;
 
         for (int i = 0; i < _maxCoin; i++)
         {
@@ -48,7 +49,7 @@ public class CoinSpawner : NetworkBehaviour
             float y = Random.Range(_ySpawnRange.x, _ySpawnRange.y);
             Vector2 spawnPoint = new Vector2(x, y);
 
-            Collider2D trySpawn = Physics2D.OverlapCircle(spawnPoint, coinRadius, _layerMask);
+            Collider2D trySpawn = Physics2D.OverlapCircle(spawnPoint, _coinRadius, _layerMask);
             if (trySpawn == null)
             {
                 return spawnPoint;
