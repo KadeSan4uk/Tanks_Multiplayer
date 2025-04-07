@@ -5892,7 +5892,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ShowTopMostFoldoutHeaderGroup: 1
-  _playerPrefab: {fileID: 9058116974248076154, guid: 36c97e160b1e96641b50cc398f03c2eb, type: 3}
+  _playerPrefab: {fileID: 8586317251861095016, guid: 36c97e160b1e96641b50cc398f03c2eb, type: 3}
+  _keptCoinPercentage: 50
 --- !u!4 &971419930
 Transform:
   m_ObjectHideFlags: 0
@@ -9249,6 +9250,7 @@ MonoBehaviour:
   ShowTopMostFoldoutHeaderGroup: 1
   _leaderboardEntityHolder: {fileID: 1086569090}
   _leaderboardEntityPrefab: {fileID: 870650157775660517, guid: f2bd675ecba13ec439949b8508fcbed0, type: 3}
+  _entitiesToDisplay: 8
 --- !u!114 &1576244458
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -20,7 +20,7 @@ public class LeaderboardEntityDisplay : MonoBehaviour
 
         if (clientId == NetworkManager.Singleton.LocalClientId)
         {
-            _displayText.color = _myColour;
+            _displayText.color = _myColour; 
         }
 
         UpdateCoins(coins);
