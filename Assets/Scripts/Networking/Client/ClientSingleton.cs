@@ -1,3 +1,4 @@
+using System;
 using System.Threading.Tasks;
 using UnityEngine;
 
@@ -32,13 +33,28 @@ public class ClientSingleton : MonoBehaviour
 
     public async Task<bool> CreateClient()
     {
-        GameManager = new ClientGameManager();
-
-        return await GameManager.InintAsync();
+        try
+        {
+            GameManager = new ClientGameManager();
+            return await GameManager.InintAsync();
+        }
+        catch (Exception ex)
+        {
+            Debug.LogError(ex.Message);
+            return false;
+        }
     }
+
 
     private void OnDestroy()
     {
-        GameManager.Dispose();
+        if (GameManager != null)
+        {
+            GameManager.Dispose();
+        }
+        else
+        {
+            Debug.LogWarning("GameManager is not initialized, cannot be called Dispose.");
+        }
     }
 }
