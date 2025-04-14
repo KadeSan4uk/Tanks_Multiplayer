@@ -25,6 +25,8 @@ public class HostGameManager : IDisposable
     private const int MaxConnections = 20;
     private const string GameSceneName = "Game";
 
+    private bool _isShuttingDown = false;
+
     public async Task StartHostAsync()
     {
         try
@@ -116,6 +118,8 @@ public class HostGameManager : IDisposable
 
     public async void Shutdown()
     {
+        _isShuttingDown = true;
+
         if (HostSingleton.Instance != null)
         {
             HostSingleton.Instance.StopCoroutine(nameof(HeartBeatLobby));
@@ -148,6 +152,12 @@ public class HostGameManager : IDisposable
 
     private async void HandleClientLeft(string authId)
     {
+        if (_isShuttingDown || string.IsNullOrEmpty(_lobbyId))
+        {
+            Debug.Log($"the Lobby no longer exist. The player cannot be removed.");
+            return;
+        }
+
         try
         {
             await LobbyService.Instance.RemovePlayerAsync(_lobbyId, authId);
