@@ -10,6 +10,9 @@ public class TankPlayer : NetworkBehaviour
     [SerializeField] private CinemachineCamera _camera;
 
     [SerializeField] private SpriteRenderer _minimapIconRenderer;
+
+    [SerializeField] private Texture2D _crosshair;
+
     [field: SerializeField] public Health Health { get; private set; }
     [field: SerializeField] public CoinWallet Wallet { get; private set; }
 
@@ -37,6 +40,8 @@ public class TankPlayer : NetworkBehaviour
         {
             _camera.Priority = _ownerPriority;
             _minimapIconRenderer.color = _ownerColor;
+
+            Cursor.SetCursor(_crosshair, new Vector2(_crosshair.width / 2, _crosshair.height / 2), CursorMode.Auto);
         }
     }
 
