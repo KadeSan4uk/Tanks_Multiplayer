@@ -65,7 +65,7 @@ public class NetworkServer : IDisposable
 
     public void Dispose()
     {
-        if (_networkManager != null) { return; }
+        if (_networkManager == null) { return; }
 
         _networkManager.ConnectionApprovalCallback -= ApprovalCheck;
         _networkManager.OnClientDisconnectCallback -= OnClientDisconnect;
